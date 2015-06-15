@@ -16,7 +16,7 @@ angular.module('ui.identicon', [])
                 username: '=',
                 size: '='
             },
-            template: '<img width={{size}} height={{size}} ng-src="data:image/png;base64,{{data}}">',
+            template: '<img class="identicon" width={{size}} height={{size}} ng-src="data:image/png;base64,{{data}}">',
             controller: ["$scope", "md5", function ($scope, md5) {
                 $scope.size = (typeof($scope.size) !== 'undefined' ? $scope.size : 24);
 
